@@ -6,7 +6,7 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/08 11:32:50 by lottavi           #+#    #+#              #
-#    Updated: 2023/06/08 12:04:38 by lottavi          ###   ########.fr        #
+#    Updated: 2023/06/12 10:29:46 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,21 +18,9 @@ OBJSDIR		= objs
 INCLUDES	= incs
 EXTLIB		= libft
 
-SRCS		= main.c \
-			  sorting/main_sort.c sorting/small_sort.c sorting/sort_utils.c \
-			  preparatory/init_stacks.c preparatory/replace_with_index.c \
-			  utils/double_linked_list.c utils/errors.c \
-			  operations/push.c operations/reverse_rotate.c operations/swap.c \
-			  operations/rotate.c
-
-# Compiler options
+SRCS		=
 CC			= gcc
-CFLAGS		= -Wall -Wextra -g3 #-fsanitize=address
-
-###################################################
-# The rest is done by the MakeFile automatically, #
-# you should not have to modify it				  #
-###################################################
+CFLAGS		= -Wall -Wextra -Werror
 
 OBJS	= $(SRCS:%.c=$(OBJSDIR)/%.o)
 
