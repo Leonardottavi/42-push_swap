@@ -1,56 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instruction.c                                      :+:      :+:    :+:   */
+/*   instruction2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/12 10:25:04 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/12 10:35:40 by lottavi          ###   ########.fr       */
+/*   Created: 2023/06/12 10:36:30 by lottavi           #+#    #+#             */
+/*   Updated: 2023/06/12 10:39:08 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	sa(t_list **stack_a)
-{
-	if (swap(stack_a) == -1)
-		return (-1);
-	ft_putendl_fd("sa", 1);
-	return (0);
-}
-
-int	sb(t_list **stack_b)
-{
-	if (swap(stack_b) == -1)
-		return (-1);
-	ft_putendl_fd("sb", 1);
-	return (0);
-}
-
-int	ss(t_list **stack_a, t_list **stack_b)
-{
-	if ((ft_lstsize(*stack_a) < 2) || (ft_lstsize(*stack_b) < 2))
-		return (-1);
-	swap(stack_a);
-	swap(stack_b);
-	ft_putendl_fd("ss", 1);
-	return (0);
-}
-
-int	pa(t_list **stack_a, t_list **stack_b)
-{
-	if (push(stack_a, stack_b) == -1)
-		return (-1);
-	ft_putendl_fd("pa", 1);
-	return (0);
-}
-
-int	pb(t_list **stack_a, t_list **stack_b)
-{
-	if (push(stack_b, stack_a) == -1)
-		return (-1);
-	ft_putendl_fd("pb", 1);
-	return (0);
-}
 
 int	ra(t_list **stack_a)
 {
@@ -93,13 +51,5 @@ int	rrr(t_list **stack_a, t_list **stack_b)
 	reverseRotate(stack_a);
 	reverseRotate(stack_b);
 	ft_putendl_fd("rrr", 1);
-	return (0);
-}
-
-int	rra(t_list **stack_a)
-{
-	if (reverseRotate(stack_a) == -1)
-		return (-1);
-	ft_putendl_fd("rra", 1);
 	return (0);
 }
