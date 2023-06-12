@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:25:04 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/12 10:26:36 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/12 10:35:40 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ int	rrr(t_list **stack_a, t_list **stack_b)
 	ft_putendl_fd("rrr", 1);
 	return (0);
 }
-
 
 int	rra(t_list **stack_a)
 {
