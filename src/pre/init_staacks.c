@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:50:39 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 09:53:37 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:31:46 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef int	t_bool;
 static t_bool	is_int(int number, char *str_number)
 {
 	if (number == -1 && ft_strcmp("-1", str_number))
-		return FALSE;
+		return (FALSE);
 	return (TRUE);
 }
 
@@ -37,7 +37,7 @@ static t_bool	check_numbers(int argc, char **argv)
 	while (--argc)
 	{
 		if (!ft_isnumber(argv[argc]))
-			return FALSE;
+			return (FALSE);
 	}
 	return (TRUE);
 }
@@ -56,7 +56,7 @@ static	t_bool	check_doubles(t_list *list, size_t len)
 		while (j++ <= len)
 		{
 			if (checker->number == list->number)
-				return FALSE;
+				return (FALSE);
 			checker = checker->next;
 		}
 		list = list->next;
@@ -67,15 +67,15 @@ static	t_bool	check_doubles(t_list *list, size_t len)
 t_bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 {
 	if (!check_numbers(argc, argv))
-		return FALSE;
+		return (FALSE);
 	a->len = 0;
 	a->top = new_node(ft_atoi(argv[--argc]));
 	if (!a->top)
-		return FALSE;
+		return (FALSE);
 	a->top->prev = a->top;
 	a->top->next = a->top;
 	b->len = 0;
-	b->top = NULL;
+	b->top = (NULL);
 	while (--argc)
 	{
 		a->len++;

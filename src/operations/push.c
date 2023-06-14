@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:47:54 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 09:25:25 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:30:23 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	push(t_stack *to, t_stack *from)
 	t_list	*svg;
 
 	if (!from->len)
-		return;
+		return ;
 	svg = pop_node(from);
 	if (to->len == 0)
 		to->top = svg;

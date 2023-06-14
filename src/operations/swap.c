@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:32:18 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 09:34:17 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:30:06 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	swap(t_stack *stack)
 	int	tmp;
 
 	if (stack->len <= 1)
-		return;
+		return ;
 	tmp = stack->top->next->number;
 	stack->top->next->number = stack->top->number;
 	stack->top->number = tmp;
