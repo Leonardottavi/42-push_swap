@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:54:38 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:31:57 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:51:05 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,15 +78,15 @@ void	replace_original(t_list *list, int *numbers, size_t len)
 	}
 }
 
-int	replace_with_index(t_list *list, size_t len)
+bool	replace_with_index(t_list *list, size_t len)
 {
-	int	*numbers;
+	int		*numbers;
 
 	numbers = fill_list(list, len);
 	if (!numbers)
-		return (0);
+		return (false);
 	order_list(numbers, len);
 	replace_original(list, numbers, len);
 	free(numbers);
-	return (1);
+	return (true);
 }

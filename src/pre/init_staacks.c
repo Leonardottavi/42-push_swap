@@ -6,43 +6,41 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:50:39 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:31:46 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:49:52 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 #include "push_swap.h"
+#include "double_linked_list.h"
+
 #include <stdio.h>
 
-typedef int	t_bool;
-
-#define TRUE 1
-#define FALSE 0
-
-static t_bool	is_int(int number, char *str_number)
+static bool	is_int(int number, char *str_number)
 {
 	if (number == -1 && ft_strcmp("-1", str_number))
-		return (FALSE);
-	return (TRUE);
+		return (false);
+	return (true);
 }
 
-static t_bool	clear_list(t_stack *stack)
+static bool	clear_list(t_stack *stack)
 {
 	free_whole_list(stack->top, stack->len);
-	return (FALSE);
+	return (false);
 }
 
-static t_bool	check_numbers(int argc, char **argv)
+static bool	check_numbers(int argc, char **argv)
 {
 	while (--argc)
 	{
 		if (!ft_isnumber(argv[argc]))
-			return (FALSE);
+			return (false);
 	}
-	return (TRUE);
+	return (true);
 }
 
-static	t_bool	check_doubles(t_list *list, size_t len)
+static bool	check_doubles(t_list *list, size_t len)
 {
 	t_list	*checker;
 	size_t	i;
@@ -56,26 +54,26 @@ static	t_bool	check_doubles(t_list *list, size_t len)
 		while (j++ <= len)
 		{
 			if (checker->number == list->number)
-				return (FALSE);
+				return (false);
 			checker = checker->next;
 		}
 		list = list->next;
 	}
-	return (TRUE);
+	return (true);
 }
 
-t_bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
+bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 {
 	if (!check_numbers(argc, argv))
-		return (FALSE);
+		return (false);
 	a->len = 0;
 	a->top = new_node(ft_atoi(argv[--argc]));
 	if (!a->top)
-		return (FALSE);
+		return (false);
 	a->top->prev = a->top;
 	a->top->next = a->top;
 	b->len = 0;
-	b->top = (NULL);
+	b->top = NULL;
 	while (--argc)
 	{
 		a->len++;
@@ -89,5 +87,5 @@ t_bool	init_stacks(t_stack *a, t_stack *b, int argc, char **argv)
 	if (!check_doubles(a->top, a->len))
 		return (clear_list(a));
 	replace_with_index(a->top, a->len);
-	return (TRUE);
+	return (true);
 }

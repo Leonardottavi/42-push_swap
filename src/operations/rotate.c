@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:29:15 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:29:31 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:48:31 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,23 +18,26 @@ static void	rotate(t_stack *stack)
 	stack->top = stack->top->next;
 }
 
-void	ra(t_stack *a, t_stack *b)
+bool	ra(t_stack *a, t_stack *b)
 {
 	rotate(a);
 	b->len = b->len;
 	write(1, "ra\n", 3);
+	return (true);
 }
 
-void	rb(t_stack *a, t_stack *b)
+bool	rb(t_stack *a, t_stack *b)
 {
 	rotate(b);
 	a->len = a->len;
 	write(1, "rb\n", 3);
+	return (true);
 }
 
-void	rr(t_stack *a, t_stack *b)
+bool	rr(t_stack *a, t_stack *b)
 {
 	rotate(a);
 	rotate(b);
 	write(1, "rr\n", 3);
+	return (true);
 }

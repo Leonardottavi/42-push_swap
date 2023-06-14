@@ -6,15 +6,14 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 10:47:54 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:30:23 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:54:04 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 #include "push_swap.h"
 
-t_list	*pop_node(t_stack *stack)
+static t_list	*pop_node(t_stack *stack)
 {
 	t_list	*popped;
 
@@ -32,7 +31,7 @@ t_list	*pop_node(t_stack *stack)
 	return (popped);
 }
 
-void	push(t_stack *to, t_stack *from)
+static void	push(t_stack *to, t_stack *from)
 {
 	t_list	*svg;
 
@@ -53,16 +52,16 @@ void	push(t_stack *to, t_stack *from)
 	to->len++;
 }
 
-int	pa(t_stack *a, t_stack *b)
+bool	pa(t_stack *a, t_stack *b)
 {
 	push(a, b);
 	write(1, "pa\n", 3);
-	return (1);
+	return (true);
 }
 
-int	pb(t_stack *a, t_stack *b)
+bool	pb(t_stack *a, t_stack *b)
 {
 	push(b, a);
 	write(1, "pb\n", 3);
-	return (1);
+	return (true);
 }

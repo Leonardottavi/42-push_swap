@@ -6,7 +6,7 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:32:18 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:30:06 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/06/14 10:49:03 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,26 @@ static void	swap(t_stack *stack)
 	stack->top->number = tmp;
 }
 
-void	sa(t_stack *a, t_stack *b)
+bool	sa(t_stack *a, t_stack *b)
 {
 	swap(a);
 	b->len = b->len;
 	write(1, "sa\n", 3);
+	return (true);
 }
 
-void	sb(t_stack *a, t_stack *b)
+bool	sb(t_stack *a, t_stack *b)
 {
 	swap(b);
 	a->len = a->len;
 	write(1, "sb\n", 3);
+	return (true);
 }
 
-void	ss(t_stack *a, t_stack *b)
+bool	ss(t_stack *a, t_stack *b)
 {
 	swap(a);
 	swap(b);
 	write(1, "ss\n", 3);
+	return (true);
 }
