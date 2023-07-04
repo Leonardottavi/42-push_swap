@@ -6,7 +6,7 @@
 #    By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/14 12:58:31 by lottavi           #+#    #+#              #
-#    Updated: 2023/06/14 12:59:13 by lottavi          ###   ########.fr        #
+#    Updated: 2023/07/04 12:42:17 by lottavi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS		= main.c \
 
 # Compiler options
 CC			= gcc
-CFLAGS		= -Wall -Wextra -g3 #-fsanitize=address
+CFLAGS		= -Wall -Wextra -Werror #-fsanitize=address
 
 ###################################################
 # The rest is done by the MakeFile automatically, #
