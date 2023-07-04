@@ -6,10 +6,11 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 10:03:03 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:27:55 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/07/04 12:36:50 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 #include <stdlib.h>
 
 void	*new_node(int number)
