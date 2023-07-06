@@ -6,15 +6,12 @@
 /*   By: lottavi <lottavi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 09:50:39 by lottavi           #+#    #+#             */
-/*   Updated: 2023/06/14 10:49:52 by lottavi          ###   ########.fr       */
+/*   Updated: 2023/07/06 12:55:47 by lottavi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 #include "push_swap.h"
-#include "double_linked_list.h"
-
 #include <stdio.h>
 
 static bool	is_int(int number, char *str_number)
